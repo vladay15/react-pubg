@@ -1,0 +1,264 @@
+.nav-bar {
+  height: 70px;
+  width: 100%;
+  background-color: #20232a;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  z-index: 999;
+  .container {
+    width: 100%;
+    position: relative;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      img {
+        width: 70px;
+        height: 60px;
+      }
+    }
+    .block {
+      position: absolute;
+      right: 80px;
+      top: -4px;
+      /* Работа переключателя */
+      #toggle {
+        position: absolute;
+        left: -1000%;
+        top: -1000%;
+      }
+
+      #toggle:focus ~ .toggle-container .button-toggle {
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      #toggle:checked ~ .toggle-container .button-toggle {
+        box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+        right: -28px;
+      }
+      #toggle:checked ~ .toggle-container .button-toggle:hover {
+        box-shadow: 0 0 0 550px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1),
+          0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      #toggle:checked ~ .toggle-container .button-toggle:before {
+        transform: translateY(-50%) rotate(45deg) scale(1);
+      }
+      #toggle:checked ~ .toggle-container .button-toggle:after {
+        transform: translateY(-50%) rotate(-45deg) scale(1);
+      }
+      #toggle:checked ~ .toggle-container .button-toggle {
+        box-shadow: 0 0 0 550px rgba(0, 0, 0, 1), inset 0 0 0 20px rgba(0, 0, 0, 0.1),
+          0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      #toggle:checked ~ .nav {
+        margin-bottom: 100px;
+        pointer-events: auto;
+        transform: translate(50px, 50px);
+      }
+      #toggle:checked ~ .nav .nav-item {
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+        letter-spacing: 0;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 0;
+        opacity: 1;
+        transform: scaleY(1);
+        transition: 0.5s, opacity 0.1s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(1) {
+        transition-delay: 0.15s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(1):before {
+        transition-delay: 0.15s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(2):before {
+        transition-delay: 0.1s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(3) {
+        transition-delay: 0.05s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(3):before {
+        transition-delay: 0.05s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(4) {
+        transition-delay: 0s;
+      }
+      #toggle:checked ~ .nav .nav-item:nth-child(4):before {
+        transition-delay: 0s;
+      }
+      #toggle:checked ~ .nav .nav-item:before {
+        opacity: 0;
+      }
+
+      /* Кнопка для переключения */
+      .button-toggle {
+        position: absolute;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        // margin: 25px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 100%;
+        transition: 0.6s;
+        right: -25px;
+        top: 23px;
+      }
+      .button-toggle:hover {
+        box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .button-toggle:before,
+      .button-toggle:after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 3px;
+        width: 80%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        transition: 0.5s;
+      }
+      .button-toggle:before {
+        transform: translateY(-50%) rotate(45deg) scale(0);
+      }
+      .button-toggle:after {
+        transform: translateY(-50%) rotate(-45deg) scale(0);
+      }
+
+      /* Меню */
+      .nav {
+        display: inline-block;
+        margin: 25px 25px 20px;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      .nav-item {
+        position: relative;
+        float: right;
+        display: inline-block;
+        clear: both;
+        color: transparent;
+        font-size: 14px;
+        letter-spacing: -6.2px;
+        height: 7px;
+        line-height: 7px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        transform: scaleY(0.2);
+        transition: 0.5s, opacity 1s;
+
+      }
+      .nav-item:nth-child(1) {
+        transition-delay: 0s;
+      }
+      .nav-item:nth-child(1):before {
+        transition-delay: 0s;
+      }
+      .nav-item:nth-child(2) {
+        transition-delay: 0.05s;
+      }
+      .nav-item:nth-child(2):before {
+        transition-delay: 0.05s;
+      }
+      .nav-item:nth-child(3) {
+        transition-delay: 0.1s;
+      }
+      .nav-item:nth-child(3):before {
+        transition-delay: 0.1s;
+      }
+      .nav-item:nth-child(4) {
+        transition-delay: 0.15s;
+      }
+      .nav-item:nth-child(4):before {
+        transition-delay: 0.15s;
+      }
+      .nav-item:nth-child(1) {
+        letter-spacing: -8px;
+      }
+      .nav-item:nth-child(2) {
+        letter-spacing: -7px;
+      }
+      .nav-item:nth-child(n + 4) {
+        letter-spacing: -8px;
+        margin-top: -7px;
+        opacity: 0;
+      }
+      .nav-item:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.8);
+        transform: translateY(-50%) scaleY(5);
+        transition: 0.5s;
+      }
+    }
+  }
+}
+@media screen and(min-width:900px) {
+  .nav-bar {
+    justify-content: center;
+    .container {
+      width: 70%;
+      a {
+        img {
+          width: 80px;
+          height: 60px;
+        }
+      }
+      .block {
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        #toggle {
+          display: none;
+        }
+        .toggle-container {
+          display: none;
+        }
+        .button {
+          display: none;
+        }
+        .nav {
+          display: flex;
+          pointer-events: visible;
+          .nav-item {
+            cursor: pointer;
+            font-size: 18px;
+            letter-spacing: 0;
+            height: 100%;
+            text-transform: uppercase;
+            transform: scaleY(1);
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 17px;
+            margin: 0 10px;
+            font-weight: bold;
+            &.active{
+              color: #e61515;
+            }
+            &:before {
+              display: none;
+            }
+            &:last-child {
+              opacity: 1;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
