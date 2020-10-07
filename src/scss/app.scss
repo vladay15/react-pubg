@@ -11,6 +11,7 @@ body{
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  position: relative;
 }
 .wrapper {
   width: 100%;
@@ -18,6 +19,7 @@ body{
   .content {
     width: 100%;
     position: relative;
+    padding-bottom: 50px;
   }
 }
 @media screen and(min-width:900px){
@@ -25,6 +27,8 @@ body{
     .content {
       display: flex;
       justify-content: center;
+      padding-bottom: 90px;
+      min-height: calc(100vh - 70px);
     }
   }
 }

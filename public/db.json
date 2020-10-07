@@ -1,5 +1,6 @@
 {
-  "players": [{
+  "players": [
+    {
       "id": 0,
       "top": 1,
       "name": "LiMon4ik",
@@ -10,8 +11,8 @@
       "id": 1,
       "top": 1,
       "name": "univKARDEN",
-      "rang": 1,
-      "kills": 4
+      "rang": 3,
+      "kills": 8
     },
     {
       "id": 2,
@@ -59,50 +60,50 @@
       "id": 8,
       "top": 1,
       "name": "PornhubAgent",
-      "rang": 3,
-      "kills": 6
+      "rang": 5,
+      "kills": 17
     },
     {
       "id": 9,
       "top": 1,
       "name": "Dzirrt",
-      "rang": 4,
-      "kills": 11
+      "rang": 5,
+      "kills": 17
     },
     {
       "id": 10,
       "top": 1,
       "name": "univPrince",
-      "rang": 4,
+      "rang": 5,
       "kills": 8
     },
     {
       "id": 11,
       "top": 1,
-      "name": "VLADAY",
-      "rang": 1,
+      "name": "BRO VLADAY",
+      "rang": 2,
       "kills": 1
     },
     {
       "id": 12,
       "top": 1,
-      "name": "KR7",
-      "rang": 1,
+      "name": "BRO KR7",
+      "rang": 2,
       "kills": 0
     },
     {
       "id": 13,
       "top": 1,
-      "name": "Arsen3535",
-      "rang": 1,
+      "name": "BRO Mafia",
+      "rang": 3,
       "kills": 2
     },
     {
       "id": 14,
       "top": 1,
-      "name": "Temchik2007",
-      "rang": 1,
-      "kills": 1
+      "name": "BRO Temchik2007",
+      "rang": 3,
+      "kills": 5
     },
     {
       "id": 15,
@@ -131,6 +132,97 @@
       "name": "airMADARA",
       "rang": 1,
       "kills": 0
+    },
+    {
+      "id": 19,
+      "top": 1,
+      "name": "NERO PECTPUKT",
+      "rang": 1,
+      "kills": 8
+    },
+    {
+      "id": 20,
+      "top": 1,
+      "name": "BSMONSTER",
+      "rang": 1,
+      "kills": 3
+    },
+    {
+      "id": 21,
+      "top": 1,
+      "name": "YingYang",
+      "rang": 2,
+      "kills": 14
+    },
+    {
+      "id": 22,
+      "top": 1,
+      "name": "XIEzI",
+      "rang": 1,
+      "kills": 2
+    },
+    {
+      "id": 23,
+      "top": 1,
+      "name": "Hats",
+      "rang": 1,
+      "kills": 0
+    },
+    {
+      "id": 24,
+      "top": 1,
+      "name": "ALPHA TORNADO",
+      "rang": 1,
+      "kills": 1
+    },
+    {
+      "id": 25,
+      "top": 1,
+      "name": "ALPHA OUTLAST",
+      "rang": 1,
+      "kills": 1
+    },
+    {
+      "id": 26,
+      "top": 1,
+      "name": "DMHubbaBubba",
+      "rang": 1,
+      "kills": 1
+    },
+    {
+      "id": 27,
+      "top": 1,
+      "name": "NodeS",
+      "rang": 1,
+      "kills": 4
+    },
+    {
+      "id": 28,
+      "top": 1,
+      "name": "SSbuldozer53",
+      "rang": 1,
+      "kills": 1
+    },
+    {
+      "id": 29,
+      "top": 1,
+      "name": "CowBoy777",
+      "rang": 1,
+      "kills": 3
+    },
+    {
+      "id": 30,
+      "top": 1,
+      "name": "TD Monster",
+      "rang": 1,
+      "kills": 2
+    },
+    {
+      "id": 31,
+      "top": 1,
+      "name": "KaChelyA",
+      "rang": 1,
+      "kills": 3
     }
   ]
 }

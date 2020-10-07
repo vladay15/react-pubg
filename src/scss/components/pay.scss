@@ -1,20 +1,22 @@
-.present-wrapper {
+.pay-wrapper {
   position: relative;
   width: 100%;
+  height: 100vh;
   .container {
     position: relative;
     width: 100%;
+    height: 100%;
     padding: 50px 10px;
     font-weight: bold;
-    h1 {
-      font-size: 18px;
-      font-weight: bold;
-      color: rgba(255, 255, 255, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: -15px;
+    h1{
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -15px;
     }
     .row {
       display: flex;
@@ -84,7 +86,7 @@
             }
           }
         }
-        .btn-search-site {
+        .btn-search {
           img {
             display: none;
           }
@@ -156,7 +158,6 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
-        align-items: center;
         .sort {
           width: 200px;
           font-size: 18px;
@@ -183,58 +184,16 @@
           }
         }
         .search {
-          display: flex;
-          align-items: center;
           .input-search {
-            opacity: 1;
-            transition: 0.8s ease-in-out;
-            z-index: 2;
-            &.no-active{
-              // display: none;
-              opacity: 0;
-              z-index: 0;
             input {
-              width: 0px;
+              width: 250px;
               height: 40px;
               font-size: 16px;
             }
           }
-          input {
-            transition: 0.5s ease-in-out;
-            width: 250px;
-            height: 40px;
-            font-size: 16px;
-          }
-          }
-          .btn-search-site {
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            background-color: #393f4ee3;
-            border: 5px solid #8e8e8ed0;
-            position: absolute;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &.no-active{
-              // display: none;
-              opacity: 0;
-              position: absolute;
-              z-index: 0;
-              transition: 0.5s all ease-in-out;
-            }
-            .img {
-              display: block;
-              width: 25px;
-              height: 25px;
-              &.no-active{
-                // display: none;
-                opacity: 0;
-                position: absolute;
-                z-index: 0;
-                transition: 0.5s all ease-in-out;
-              }
+          .btn-search {
+            img {
+              display: none;
             }
           }
         }

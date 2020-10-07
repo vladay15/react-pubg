@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sort = () => {
+const Sort = ({ items }) => {
   let pop = ['rating', 'statistics'];
   const [visiblePopup, setVisiblePopup] = React.useState(false);
   const sortRef = React.useRef();
@@ -20,9 +20,38 @@ const Sort = () => {
     document.body.addEventListener('click', handleOutsideClick);
   }, []);
   const onSelectItem = (index) => {
+    sortFunc();
     setActiveItem(index);
     setVisiblePopup(false);
   };
+  let sortFunc = () =>{
+  if (activeItem == 0) {
+    items.sort(function (a, b) {
+      if (a.rang > b.rang) {
+        return -1;
+      }
+      if (a.rang < b.rang) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+  if(activeItem == 1) {
+    items.sort(function (a, b) {
+      let sum = a.kills / a.rang;
+      let sum1 = b.kills / b.rang;
+      if (sum > sum1) {
+        return -1;
+      }
+      if (sum < sum1) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+  console.log(activeItem);
+  }
+
   return (
     <div className="sort" ref={sortRef}>
       <span>sort by: </span>
@@ -35,7 +64,8 @@ const Sort = () => {
             {pop &&
               pop.map((name, index) => (
                 <li
-                  onClick={() => onSelectItem(index)}
+                  onClick={() => {onSelectItem(index);
+                  sortFunc();}}
                   className={activeItem === index ? 'active' : ''}
                   key={`${name}_${index}`}>
                   {name}

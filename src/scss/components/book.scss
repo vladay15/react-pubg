@@ -35,22 +35,51 @@
     .advice {
       font-weight: bold;
       text-align: left;
-      .bold {
-        color: rgb(0, 0, 0);
-        padding: 10px 0;
-      }
-      .advice-text {
+      .custom-btn {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: rgba(0,0,0,0.3);
         color: rgba(255, 255, 255, 0.8);
-        display: block;
+        button {
+          width: 30px;
+          height: 30px;
+          background-color: #333;
+          color: #fff;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.2s ease-in-out;
+          &:hover{
+            background-color: rgb(80, 80, 80);
+          }
+        }
+        span {
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin: 0 5px;
+          font-size: 18px;
+        }
+      }
+      .advice-wrap {
+        .bold {
+          color: rgb(0, 0, 0);
+          padding: 10px 0;
+        }
+        .advice-text {
+          color: rgba(255, 255, 255, 0.8);
+          display: block;
+        }
       }
     }
   }
   .map-loot {
-    .list-img{
+    .list-img {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      img{
+      img {
         margin: 5px;
         width: 330px;
         height: 330px;
@@ -58,11 +87,11 @@
     }
   }
   .map-t {
-    .list-img{
+    .list-img {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      img{
+      img {
         margin: 5px;
         width: 330px;
         height: 330px;
@@ -70,11 +99,11 @@
     }
   }
   .map-f {
-    .list-img{
+    .list-img {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      img{
+      img {
         margin: 5px;
         width: 330px;
         height: 330px;
@@ -82,7 +111,7 @@
     }
   }
 }
-@media screen and(min-width:900px){
+@media screen and(min-width:900px) {
   .book {
     width: 68%;
     .menu {
@@ -96,34 +125,66 @@
       .advice {
         font-weight: bold;
         text-align: left;
-        font-size: 18px;
+        .custom-btn {
+          width: 300px;
+          button {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .advice-wrap{
+          font-size: 18px;
+        }
       }
     }
     .map-loot {
-      .list-img{
+      .list-img {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        img{
+        .img {
           margin: 5px;
           width: 400px;
           height: 400px;
+          cursor: pointer;
+          &.active {
+            transition: 0.5s ease-in-out;
+            position: absolute;
+            width: 650px;
+            height: 650px;
+          }
         }
       }
     }
     .map-t {
-      .list-img{
-        img{
+      .list-img {
+        .img {
+          margin: 5px;
           width: 400px;
           height: 400px;
+          cursor: pointer;
+          &.active {
+            transition: 0.5s ease-in-out;
+            position: absolute;
+            width: 650px;
+            height: 650px;
+          }
         }
       }
     }
     .map-f {
-      .list-img{
-        img{
+      .list-img {
+        .img {
+          margin: 5px;
           width: 400px;
           height: 400px;
+          cursor: pointer;
+          &.active {
+            transition: 0.5s ease-in-out;
+            position: absolute;
+            width: 650px;
+            height: 650px;
+          }
         }
       }
     }

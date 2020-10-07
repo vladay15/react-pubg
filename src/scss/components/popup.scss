@@ -1,0 +1,30 @@
+#popup-root {
+  #popup-2 {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+    left: 0;
+    background-color: rgb(41, 45, 62);
+    color: #fff;
+    border: 1px solid #9a9595;
+    svg {
+      color: rgb(41, 45, 62);
+      stroke-width: 2px;
+      stroke: #9a9595;
+      stroke-dasharray: 30px;
+      stroke-dashoffset: -54px;
+    }
+    .nav-item{
+        color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+@media screen and(min-width:900px) {
+  #popup-root {
+    #popup-2 {
+      font-weight: bold;
+      font-size: 16px;
+      color: #000000;
+    }
+  }
+}

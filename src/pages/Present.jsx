@@ -13,7 +13,7 @@ const Present = ({ items }) => {
         obj.rang,
     );
   };
-  // sort
+  // sort for rang
   items.sort(function (a, b) {
     if (a.rang > b.rang) {
       return -1;
@@ -24,11 +24,26 @@ const Present = ({ items }) => {
     return 0;
   });
 
+  // sort for stat
+
+// items.sort(function(a,b){
+//   let sum = a.kills/a.rang;
+//   let sum1 = b.kills/b.rang;
+//   if(sum > sum1){
+//     return -1;
+//   }
+//   if(sum < sum1){
+//     return 1;
+//   }
+//   return 0;
+// });
+
   return (
     <div className="present-wrapper">
       <div className="container">
+        <h1>ТРЕТЄ ЛИЦЕ</h1>
         <div className="row">
-          <Sort />
+          <Sort items={items}/>
           <Search />
         </div>
         <div className="player-list">

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Nav} from './components';
-import { Present, Past, News, Book, Footer } from './pages';
+import { Present, Past, News, Book, Footer, Pay, Third } from './pages';
 
 import { Route } from 'react-router-dom';
 
@@ -19,10 +19,12 @@ const App = () => {
         <div className="content">
             <Route path="/news" render={()=><News />} />
             <Route path="/" render={()=><Present items={players} />} exact />
+            <Route path="/pay" render={()=><Pay />}/>
+            <Route path="/third" render={()=><Third />}/>
             <Route path="/past" render={()=><Past />}/>
             <Route path="/book" render={()=><Book />} />
         </div>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
   );
 }
